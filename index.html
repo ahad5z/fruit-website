@@ -7,11 +7,51 @@
       <!-- Tailwind and Daisy UI cdn  -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+   
+  <!-- Google Font Lato  -->
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+   
    <!-- Font awesome cdn  -->
+
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
    crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+
+    <!-- Custom color code  -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            'nav-bg': '#F85559',
+            'footer-bg': '#121212',
+            
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .popup-star svg {
+      /* margin-left: 21px; */
+      /* width: 29px; */
+      margin-left: 208px
+    }
+
+    .lato-font {
+      font-family: 'Lato', sans-serif;
+    }
+
+    .star svg {
+      width: 150px;
+      /* margin-left: 14rem; */
+    }
+  </style>
+  </head>
 <body>
     <header>
 <!-- navbar section start  -->
@@ -25,6 +65,37 @@
             <li class="text-white text-[20px]"><a>All Fruits</a></li>
           </ul>
         </div>
+
+        <div class="navbar-start lg:hidden">
+          <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost btn-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+              </svg>
+            </label>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+              <li><a>About Us</a></li>
+              <li><a>Shop</a></li>
+              <li><a>All Fruits</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-end">
+          <img src="./images/logo.png" alt="logo">
+          <a class="btn btn-ghost normal-case text-white text-4xl">Fruit Burst</a>
+
+        </div>
+        <div class="navbar-end">
+          
+          <div
+            class="bg-white flex sm:flex-row px-1 py-0 lg:px-6 lg:py-1 rounded-full absolute hidden md:block lg:block">
+            <input type="search" placeholder="Search here" class="text-xs">
+            <i class="fa-solid fa-magnifying-glass pt-1 pr-1 lg:pr-0 text-gray-500"></i>
+          </div>
+        </div>
+      </div>
 </section>
 
     </header>
